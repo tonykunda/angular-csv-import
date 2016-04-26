@@ -20,15 +20,13 @@ csvImport.directive('ngCsvImport', function() {
 			encodingVisible: '=?',
 			accept: '=?'
 		},
-		template: '<div>'+
-          		'<div class="input-group">'+
+		template: '<div class="input-group">'+
               '<span class="input-group-btn">'+
               '<span class="btn btn-primary btn-file">'+
-              'Select File&hellip; <input type="file" accept="{{accept}}>'+
+              'Select File&hellip; <input type="file" accept=".csv">'+
               '</span>'+
               '</span>'+
-              '<input type="text" class="form-control" readonly ng-model="scope.filename">'+
-			        '</div>',
+              '<input type="text" class="form-control" readonly ng-model="filename">',
 		link: function(scope, element) {
 			scope.separatorVisible = scope.separatorVisible || false;
 			scope.headerVisible = scope.headerVisible || false;
